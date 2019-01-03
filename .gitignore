@@ -1,0 +1,5 @@
+# Podemos especificar archivos individuales
+.DS_Store
+node_modules
+npm-debug.log
+.env

@@ -1,0 +1,17 @@
+{
+  "name": "Lunave",
+  "version": "1.2.0",
+  "description": " Base para desarrollos web de lunave ",
+  "main": "gulpfile.js",
+  "author": "jairovillalobos",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-pug": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sitemap": "^4.2.0"
+  }
+}

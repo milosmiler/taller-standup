@@ -1,0 +1,54 @@
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		title TALLER DE STANDUP
+		link(href="css/style.css", rel="stylesheet", type="text/css")
+		link(rel='shortcut icon', type='image/x-icon', href='images/favicon.ico')
+		meta(name='description', content='descripcion del sitio web')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(property='og:title', content=' ')
+		meta(property='og:site_name', content=' ')
+		meta(property='og:url', content=' ')
+		meta(property='og:description', content=' ')
+		meta(property='og:image', content=' ')
+	body
+		include block/header.pug
+		section.main
+			.container
+				figure.logo
+					img(src="images/logo.png" alt="Taller de standup")
+				h2 21 Y 22 DE ENERO INICIAMOS
+				p SEDE EN 
+					span BEER HALL #[br] 
+					|(ESQUINA SONORA Y CAMPECHE EN LA ROMA)
+				form.registro.flex
+					p TODOS LOS CAMPOS SON OBLIGATORIOS
+					.col
+						.group
+							input(type='text', required='')
+							span.highlight
+							span.bar
+							label NOMBRE COMPLETO
+						.group
+							input(type='text', required='')
+							span.highlight
+							span.bar
+							label NOMBRE COMPLETO
+					.col
+						.group
+							input(type='text', required='')
+							span.highlight
+							span.bar
+							label E-MAIL
+						.group
+							input(type='text', required='')
+							span.highlight
+							span.bar
+							label TELÉFONO
+					.row
+						button.enviar REGISTRARME
+
+		include block/footer.pug
+		script(src="js/jquery-1.11.3.min.js")
+		script(src='js/main.js', type="text/javascript")
