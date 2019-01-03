@@ -26,28 +26,28 @@ html(lang="es")
 					p TODOS LOS CAMPOS SON OBLIGATORIOS
 					.col
 						.group
-							input(type='text', required='')
-							span.highlight
+							input(type='text', required='' name="nombre")
 							span.bar
 							label NOMBRE COMPLETO
 						.group
 							input(type='text', required='')
-							span.highlight
 							span.bar
 							label NOMBRE COMPLETO
 					.col
 						.group
-							input(type='text', required='')
-							span.highlight
+							input(type='text', required='' name="email")
 							span.bar
 							label E-MAIL
 						.group
-							input(type='text', required='')
-							span.highlight
+							input(type='text', required='' name="telefono")
 							span.bar
 							label TELÉFONO
 					.row
 						button.enviar REGISTRARME
+		.overlay
+			.popup
+				h2 GRACIAS POR REGISTRARTE
+				p EN BREVE TE MANDEREMOS #[br] UN CORREO CON LA INFORMACIÓN
 
 		include block/footer.pug
 		script(src="js/jquery-1.11.3.min.js")
