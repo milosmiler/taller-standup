@@ -23,21 +23,21 @@
           <p>TODOS LOS CAMPOS SON OBLIGATORIOS</p>
           <div class="col">
             <div class="group">
-              <input type="text" required="" name="nombre"><span class="bar"></span>
+              <input type="text" required="" name="nombre" data-parsley-required><span class="bar"></span>
               <label>NOMBRE COMPLETO</label>
             </div>
             <div class="group">
-              <input type="text" required=""><span class="bar"></span>
+              <input type="text" required="" data-parsley-required><span class="bar"></span>
               <label>NOMBRE COMPLETO</label>
             </div>
           </div>
           <div class="col">
             <div class="group">
-              <input type="text" required="" name="email"><span class="bar"></span>
+              <input type="text" required="" name="email" data-parsley-required data-parsley-type="email"><span class="bar"></span>
               <label>E-MAIL</label>
             </div>
             <div class="group">
-              <input type="text" required="" name="telefono"><span class="bar"></span>
+              <input type="text" required="" name="telefono" data-parsley-required><span class="bar"></span>
               <label>TELÉFONO</label>
             </div>
           </div>
@@ -54,6 +54,7 @@
       </div>
     </div>
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/parsley.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
   </body>
 </html>

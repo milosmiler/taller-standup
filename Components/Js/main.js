@@ -1,1 +1,1 @@
-console.log('hello');
+$('form').parsley();

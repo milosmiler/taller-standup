@@ -26,20 +26,20 @@ html(lang="es")
 					p TODOS LOS CAMPOS SON OBLIGATORIOS
 					.col
 						.group
-							input(type='text', required='' name="nombre")
+							input(type='text', required='' name="nombre" data-parsley-required)
 							span.bar
 							label NOMBRE COMPLETO
 						.group
-							input(type='text', required='')
+							input(type='text', required='' data-parsley-required)
 							span.bar
 							label NOMBRE COMPLETO
 					.col
 						.group
-							input(type='text', required='' name="email")
+							input(type='text', required='' name="email" data-parsley-required data-parsley-type="email")
 							span.bar
 							label E-MAIL
 						.group
-							input(type='text', required='' name="telefono")
+							input(type='text', required='' name="telefono" data-parsley-required)
 							span.bar
 							label TELÉFONO
 					.row
@@ -51,4 +51,5 @@ html(lang="es")
 
 		include block/footer.pug
 		script(src="js/jquery-1.11.3.min.js")
+		script(src="js/parsley.js")
 		script(src='js/main.js', type="text/javascript")
