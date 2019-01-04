@@ -331,17 +331,28 @@ h1, h2, h3, h4 {
   color: #303030; }
 
 /*** FONT FACE ***/
+.group1 {
+  position: relative; }
+  .group1:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #707070;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
 select {
   width: 100%;
-  height: 50px;
+  height: 61px;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #fff;
   color: #fff;
   font-family: 'Lato';
   color: #FAAF05;
   border-radius: 0px;
-  font-size: 15px; }
+  font-size: 15px;
+  position: relative; }
 
 section.main {
   background-image: url("../images/fondo.jpg");
@@ -464,38 +475,14 @@ form.registro {
     font-size: 15px;
     font-family: 'Lato';
     font-weight: 400; }
-    .group input:focus {
-      outline: none; }
-    .group input:focus ~ label, .group input:valid ~ label {
-      top: -10px;
-      font-size: 14px;
-      color: var(--berry); }
   .group label {
-    position: absolute;
-    top: 12px;
-    left: 0;
-    transition: 0.2s ease all;
     font-family: 'Lato';
     color: #FAAF05;
     font-size: 21px; }
 
-.bar {
-  position: relative;
-  display: block;
-  width: 100%; }
-  .bar:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    bottom: 15px;
-    background: var(--berry-claro);
-    height: 4px;
-    transition: left 0.2s ease-out,  right 0.2s ease-out; }
-
-input:focus ~ .bar:before {
-  left: 0;
-  right: 0; }
+.parsley-errors-list {
+  position: absolute;
+  bottom: 10px; }
 
 input.parsley-success,
 select.parsley-success,
@@ -580,4 +567,6 @@ footer {
     padding-right: 15px;
     background-image: url("../images/fondo.jpg"); }
   .group label {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .group1 {
+    margin-bottom: 10px; } }

@@ -26,22 +26,22 @@ html(lang="es")
 					p TODOS LOS CAMPOS SON OBLIGATORIOS
 					.col
 						.group
-							input(type='text', required='' name="nombre" data-parsley-required)
-							span.bar
 							label NOMBRE COMPLETO
-						.group
+							input(type='text', required='' name="nombre" data-parsley-required)
+							
+						.group1
 							select
-								option(value="basico") Basico
+								option(value="basico") BASICO
 								option(value="tallereo") Tallereo
 					.col
 						.group
-							input(type='text', required='' name="email" data-parsley-required data-parsley-type="email")
-							span.bar
 							label E-MAIL
+							input(type='text', required='' name="email" data-parsley-required data-parsley-type="email")
+							
 						.group
-							input(type='text', required='' name="telefono" data-parsley-required)
-							span.bar
 							label TELÉFONO
+							input(type='text', required='' name="telefono" data-parsley-required)
+
 					.row
 						button.enviar REGISTRARME
 		.overlay
