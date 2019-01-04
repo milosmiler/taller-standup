@@ -178,13 +178,13 @@ require ('phpmailer/SMTP.php');
 
 </body>';
 }
-        $mailTosend = "gotiel.orm@gmail.com";
+        $mailTosend = "curso@beastcomedy.com";
         // $mailTosend = "curso@beastcomedy.com";
         $mail = new PHPMailer\PHPMailer\PHPMailer();
         $mail->IsHTML(true);
         $mail->SetFrom("curso@beastcomedy.com");
         $mail->Subject = "Nuevo Usuario de sitio Web";
-        $mail->Body = $bodyMail;
+        $mail->Body = 'Nombre: '.$nombre.'<br> Email: '.$email.'<br>'.'Teléfono: '+$telefono+'<br> Curso: '+$curso;
         $mail->AddAddress($email);
         $mail->Send();
 
