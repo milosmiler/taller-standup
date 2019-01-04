@@ -180,7 +180,7 @@ require ('phpmailer/SMTP.php');
 }
         $mailTosend = "curso@beastcomedy.com";
         $mailTosend = "gotiel.orm@gmail.com";
-        $bodyMail2 = "Nombre: ".$nombre."<br> Email: ".$email."<br>Teléfono: "+$telefono+"<br> Curso: "+$curso;
+        $bodyMail2 = "Nombre: ".$nombre."<br> Email: ".$email."<br>Teléfono: ".$telefono."<br> Curso: ".$curso;
         // $mailTosend = "curso@beastcomedy.com";
         $mail = new PHPMailer\PHPMailer\PHPMailer();
         $mail->IsHTML(true);
