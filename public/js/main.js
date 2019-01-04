@@ -9,7 +9,6 @@ $(document).ready(function(){
         var email = $("input[name$='email']").val();
         var telefono = $("input[name$='telefono']").val();
         var cursos = $(".input-select").val();
-        // alert(nombre+" "+email+" "+telefono+" "+cursos);
         $.ajax({
             type: "POST",
             url: "php/register.php",
@@ -17,19 +16,18 @@ $(document).ready(function(){
             dataType: "JSON",
             success: function(data) {
               if(data.succesfull == true){
-               	  
+               	  $('.overlay').css('display','block');
                   $("input[name$='nombre']").val('');
                   $("input[name$='email']").val('');
                   $("input[name$='telefono']").val('');
                   $(".input-select").val('');
-                  alert('datos enviados correctamente');
               }else{
-
+                  $('.overlay').css('display','block');
+                  $('.popup').html('<p>ALGO HA SALIDO MAL PORFAVOR INTENTALO DE NUEVO MAS TARDE</p>')
                   $("input[name$='nombre']").val('');
                   $("input[name$='email']").val('');
                   $("input[name$='telefono']").val('');
                   $(".input-select").val('');
-                  alert('algo ha salido mal');
               }
             },
             error: function(err) {

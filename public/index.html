@@ -19,7 +19,7 @@
         <figure class="logo"><img src="images/logo.svg" alt="Taller de standup"></figure>
         <h2>21 Y 22 DE ENERO INICIAMOS</h2>
         <p>SEDE EN <span>BEER HALL <br> </span>(ESQUINA SONORA Y CAMPECHE EN LA ROMA)</p>
-        <form class="registro flex">
+        <form method="POST" class="registro flex form-index">
           <p>TODOS LOS CAMPOS SON OBLIGATORIOS</p>
           <div class="col">
             <div class="group">
@@ -27,9 +27,9 @@
               <input type="text" required="" name="nombre" data-parsley-required>
             </div>
             <div class="group1">
-              <select>
-                <option value="basico">BASICO</option>
-                <option value="tallereo">Tallereo</option>
+              <select class="input-select" name="curso">
+                <option value="Basico">BASICO</option>
+                <option value="Tallereo">Tallereo</option>
               </select>
             </div>
           </div>

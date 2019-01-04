@@ -35,6 +35,7 @@ require ('phpmailer/SMTP.php');
     // $res=['succesfull' => true];
     // echo json_encode($res);
     $mailTosend = "gotiel.orm@gmail.com";
+    // $mailTosend = "curso@beastcomedy.com";
     $mail = new PHPMailer\PHPMailer\PHPMailer();
 //    $mail->IsSMTP(); // enable SMTP
 //    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -49,6 +50,22 @@ require ('phpmailer/SMTP.php');
     $mail->Subject = "Nuevo Usuario de sitio Web";
     $mail->Body = "<b>Hola tenemos un nuevo registro de usuario desde el sitio web para";
     $mail->AddAddress($mailTosend);
+
+
+    $mail2 = new PHPMailer\PHPMailer\PHPMailer();
+//    $mail->IsSMTP(); // enable SMTP
+//    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+//    $mail->SMTPAuth = true; // authentication enabled
+//    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+//    $mail->Host = "smtp.gmail.com";
+//    $mail->Port = 465; // or 587
+    $mail2->IsHTML(true);
+//    $mail->Username = "gotiel.orm@gmail.com";
+//    $mail->Password = "RaKman1493";
+    $mail2->SetFrom("curso@beastcomedy.com");
+    $mail2->Subject = "Registro al taller de Stand Up";
+    $mail2->Body = "<b>Hola tenemos un nuevo registro de usuario desde el sitio web para";
+    $mail2->AddAddress($mailTosend);
 
      if(!$mail->Send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
