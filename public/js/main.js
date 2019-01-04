@@ -31,6 +31,7 @@ $(document).ready(function(){
               }
             },
             error: function(err) {
+            console.log('algo mal');
             alert(err);
             }
         });
