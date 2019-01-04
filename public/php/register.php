@@ -3,22 +3,22 @@ require ('phpmailer/Exception.php');
 require ('phpmailer/PHPMailer.php');
 require ('phpmailer/SMTP.php');
 
-    $host = "localhost";
-    $user = "root";
-    $db = "taller_standup";
-    $pass = "root";
-
     // $host = "localhost";
-    // $user = "usrTallerStandUp";
+    // $user = "root";
     // $db = "taller_standup";
-    // $pass = "t4ll3r5t4ndup";
+    // $pass = "root";
 
-    // Conectar a la base
-    //  la variable $myslqi contendrá el objeto con la conexión
-    $mysqli = mysqli_connect($host, $user, $pass, $db);
-    if (mysqli_connect_errno($mysqli)) {
-        die( "Error al conectar a MySQL: " . mysqli_connect_error() );
-    }
+    // // $host = "localhost";
+    // // $user = "usrTallerStandUp";
+    // // $db = "taller_standup";
+    // // $pass = "t4ll3r5t4ndup";
+
+    // // Conectar a la base
+    // //  la variable $myslqi contendrá el objeto con la conexión
+    // $mysqli = mysqli_connect($host, $user, $pass, $db);
+    // if (mysqli_connect_errno($mysqli)) {
+    //     die( "Error al conectar a MySQL: " . mysqli_connect_error() );
+    // }
     
 
     if(isset($_POST['nombre']) && isset($_POST['email']) &&
@@ -29,9 +29,9 @@ require ('phpmailer/SMTP.php');
         $telefono = $_POST['telefono'];     
         $curso = $_POST['curso'];
     
-    //insert en la base
-    $query = "INSERT INTO `registro`(`id`, `nombre`, `email`, `telefono`, `curso`) VALUES (0, '".$nombre."', '".$email."', '".$telefono."', '".$curso."')";
-    mysqli_query($mysqli, $query);
+    // //insert en la base
+    // $query = "INSERT INTO `registro`(`id`, `nombre`, `email`, `telefono`, `curso`) VALUES (0, '".$nombre."', '".$email."', '".$telefono."', '".$curso."')";
+    // mysqli_query($mysqli, $query);
     // $res=['succesfull' => true];
     // echo json_encode($res);
     if($curso != 'Tallereo'){  
@@ -50,7 +50,7 @@ require ('phpmailer/SMTP.php');
     <td colspan="2">
     <center>
       <a href="">
-        <img width="50%" style="display:block; margin: 1.5% 3%" src="logo.svg">
+        <img width="50%" style="display:block; margin: 1.5% 3%" src="http://beastcomedy.com/images/logo.svg">
       </a>
     </center>
     </td>
@@ -131,7 +131,7 @@ require ('phpmailer/SMTP.php');
     <td colspan="2">
     <center>
       <a href="">
-        <img width="50%" style="display:block; margin: 1.5% 3%" src="logo.svg">
+        <img width="50%" style="display:block; margin: 1.5% 3%" src="http://beastcomedy.com/images/logo.svg">
       </a>
     </center>
     </td>
@@ -179,13 +179,15 @@ require ('phpmailer/SMTP.php');
 </body>';
 }
         $mailTosend = "curso@beastcomedy.com";
+        $mailTosend = "gotiel.orm@gmail.com";
+        $bodyMail2 = "Nombre: ".$nombre."<br> Email: ".$email."<br>Teléfono: "+$telefono+"<br> Curso: "+$curso;
         // $mailTosend = "curso@beastcomedy.com";
         $mail = new PHPMailer\PHPMailer\PHPMailer();
         $mail->IsHTML(true);
         $mail->SetFrom("curso@beastcomedy.com");
-        $mail->Subject = "Nuevo Usuario de sitio Web";
-        $mail->Body = 'Nombre: '.$nombre.'<br> Email: '.$email.'<br>'.'Teléfono: '+$telefono+'<br> Curso: '+$curso;
-        $mail->AddAddress($email);
+        $mail->Subject = "Nuevo registro desde sitio web Beast Comedy";
+        $mail->Body = $bodyMail2;
+        $mail->AddAddress($mailTosend);
         $mail->Send();
 
 
