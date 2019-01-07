@@ -179,7 +179,7 @@ require ('phpmailer/SMTP.php');
 </body>';
 }
         $mailTosend = "curso@beastcomedy.com";
-        $mailTosend = "gotiel.orm@gmail.com";
+        // $mailTosend = "gotiel.orm@gmail.com";
         $bodyMail2 = "Nombre: ".$nombre."<br> Email: ".$email."<br>Teléfono: ".$telefono."<br> Curso: ".$curso;
         // $mailTosend = "curso@beastcomedy.com";
         $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -188,8 +188,6 @@ require ('phpmailer/SMTP.php');
         $mail->Subject = "Nuevo registro desde sitio web Beast Comedy";
         $mail->Body = $bodyMail2;
         $mail->AddAddress($mailTosend);
-        $mail->Send();
-
 
         $mail2 = new PHPMailer\PHPMailer\PHPMailer();
         $mail2->IsHTML(true);
