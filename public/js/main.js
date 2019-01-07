@@ -2,8 +2,6 @@ $('form').parsley();
 
 $(document).ready(function(){
 
-
-if($('.enviar').hasClass('active')){
 	$('.form-index').submit(function(e){
         e.preventDefault();
         var nombre = $("input[name$='nombre']").val();
@@ -38,7 +36,6 @@ if($('.enviar').hasClass('active')){
             }
         });
     });
-  }
 
      var numeros = /[0-9]/;
      var letras = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/;
